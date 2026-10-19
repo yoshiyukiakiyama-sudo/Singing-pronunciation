@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SingingPronunciationLab</title>
+<style>
+  body { font-family: sans-serif; margin: 0; background: #f6f7fb; color: #222; }
+  header { background: #4a5bd4; color: #fff; padding: 12px 16px; position: sticky; top: 0; z-index: 1; }
+  h1 { font-size: 1.1rem; margin: 0; }
+  main { padding: 12px; max-width: 720px; margin: auto; }
+  button { font-size: 1rem; padding: 10px 16px; border: 0; border-radius: 8px; background: #4a5bd4; color: #fff; }
+  button.sub { background: #888; }
+  .song { display: block; width: 100%; text-align: left; background: #fff; color: #222; margin: 8px 0; padding: 14px; box-shadow: 0 1px 3px #0003; }
+  .line { background: #fff; margin: 8px 0; padding: 10px 14px; border-radius: 8px; box-shadow: 0 1px 3px #0002; cursor: pointer; }
+  .line.active { background: #fff3c4; }
+  .orig { font-size: 1.15rem; font-weight: bold; }
+  .pron { color: #b03a7a; margin-top: 2px; }
+  .tran { color: #555; font-size: .9rem; margin-top: 2px; }
+  .bar { display: flex; gap: 8px; align-items: center; margin: 8px 0; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<header><h1>🎤 SingingPronunciationLab</h1></header>
+<main id="app"></main>
+<script>
+const app = document.getElementById("app");
+let timer = null, playing = false, rate = 0.6;
+
+async function showList() {
+  stop();
+  const songs = await (await fetch("songs/index.json")).json();
+  app.innerHTML = songs.length ? "" : "<p>曲がまだありません</p>";
+  for (const s of songs) {
+    const b = document.createElement("button");
+    b.className = "song";
+    b.textContent = `${s.title}　${s.artist}（${s.language}）`;
+    b.onclick = () => showSong(s.id);
+    app.appendChild(b);
+  }
+}
+
+async function showSong(id) {
+  const d = await (await fetch(`songs/${encodeURIComponent(id)}.json`)).json();
+  app.innerHTML = `
+    <div class="bar"><button class="sub" id="back">← 一覧</button>
+    <button id="playAll">▶ 発音再生</button>
+    <button class="sub" id="stop">■ 停止</button></div>
+    <div class="bar"><label>速度 <input type="range" id="rate" min="0.3" max="1" step="0.1" value="${rate}"></label></div>
+    <h2>${esc(d.title)} <small>${esc(d.artist || "")}</small></h2><div id="lines"></div>`;
+  const box = document.getElementById("lines");
+  d.lines.forEach((l, i) => {
+    const el = document.createElement("div");
+    el.className = "line";
+    el.innerHTML = `<div class="orig">${esc(l.original)}</div><div class="pron">${esc(l.pronunciation)}</div><div class="tran">${esc(l.translation)}</div>`;
+    el.onclick = () => { stop(); speak(d, i); };
+    box.appendChild(el);
+  });
+  document.getElementById("back").onclick = showList;
+  document.getElementById("stop").onclick = stop;
+  document.getElementById("rate").oninput = e => rate = +e.target.value;
+  document.getElementById("playAll").onclick = () => { stop(); playing = true; playFrom(d, 0); };
+}
+
+function speak(d, i, onend) {
+  const els = document.querySelectorAll(".line");
+  els.forEach(e => e.classList.remove("active"));
+  els[i].classList.add("active");
+  els[i].scrollIntoView({ block: "center", behavior: "smooth" });
+  const u = new SpeechSynthesisUtterance(d.lines[i].original);
+  u.lang = d.lang_code;
+  u.rate = rate;
+  u.onend = onend || null;
+  speechSynthesis.speak(u);
+}
+
+function playFrom(d, i) {
+  if (!playing || i >= d.lines.length) { playing = false; return; }
+  speak(d, i, () => { timer = setTimeout(() => playFrom(d, i + 1), 300); });
+}
+
+function stop() {
+  playing = false;
+  clearTimeout(timer);
+  speechSynthesis.cancel();
+}
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+showList();
+</script>
+</body>
+</html>
