@@ -46,7 +46,7 @@ async function showSong(id) {
     <div class="bar"><button class="sub" id="back">← 一覧</button>
     <button id="playAll">▶ 発音再生</button>
     <button class="sub" id="stop">■ 停止</button></div>
-    <div class="bar"><label>速度 <input type="range" id="rate" min="0.3" max="1" step="0.1" value="${rate}"></label></div>
+    <div class="bar"><label>速度 <input type="range" id="rate" min="0.2" max="1" step="0.1" value="${rate}"></label></div>
     <h2>${esc(d.title)} <small>${esc(d.artist || "")}</small></h2><div id="lines"></div>`;
   const box = document.getElementById("lines");
   d.lines.forEach((l, i) => {
