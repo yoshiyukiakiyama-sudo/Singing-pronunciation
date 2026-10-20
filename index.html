@@ -15,9 +15,12 @@
   .line { background: #fff; margin: 8px 0; padding: 10px 14px; border-radius: 8px; box-shadow: 0 1px 3px #0002; cursor: pointer; }
   .line.active { background: #fff3c4; }
   .orig { font-size: 1.15rem; font-weight: bold; }
+  .word { border-bottom: 1px dotted #888; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+  .word.pressing { background: #e4e8ff; }
   .pron { color: #b03a7a; margin-top: 2px; }
   .tran { color: #555; font-size: .9rem; margin-top: 2px; }
   .bar { display: flex; gap: 8px; align-items: center; margin: 8px 0; flex-wrap: wrap; }
+  .hint { color: #666; font-size: .9rem; }
 </style>
 </head>
 <body>
@@ -25,9 +28,12 @@
 <main id="app"></main>
 <script>
 const app = document.getElementById("app");
-let timer = null, playing = false, rate = 0.6;
+let timer = null, playing = false, rate = 0.6, currentSong = null;
+let activePress = null, suppressNextClick = false, suppressClickTimer = null;
+const LONG_PRESS_MS = 500, MOVE_TOLERANCE = 10;
 
 async function showList() {
+  cancelActivePress();
   stop();
   const songs = await (await fetch("songs/index.json")).json();
   app.innerHTML = songs.length ? "" : "<p>曲がまだありません</p>";
@@ -41,19 +47,49 @@ async function showList() {
 }
 
 async function showSong(id) {
+  cancelActivePress();
+  stop();
   const d = await (await fetch(`songs/${encodeURIComponent(id)}.json`)).json();
+  currentSong = d;
   app.innerHTML = `
     <div class="bar"><button class="sub" id="back">← 一覧</button>
     <button id="playAll">▶ 発音再生</button>
     <button class="sub" id="stop">■ 停止</button></div>
     <div class="bar"><label>速度 <input type="range" id="rate" min="0.2" max="1" step="0.1" value="${rate}"></label></div>
-    <h2>${esc(d.title)} <small>${esc(d.artist || "")}</small></h2><div id="lines"></div>`;
+    <h2>${esc(d.title)} <small>${esc(d.artist || "")}</small></h2>
+    <p class="hint">歌詞をタップ: 行を再生 / 単語を長押し: 直前の単語と合わせて再生</p><div id="lines"></div>`;
   const box = document.getElementById("lines");
   d.lines.forEach((l, i) => {
     const el = document.createElement("div");
     el.className = "line";
-    el.innerHTML = `<div class="orig">${esc(l.original)}</div><div class="pron">${esc(l.pronunciation)}</div><div class="tran">${esc(l.translation)}</div>`;
-    el.onclick = () => { stop(); speak(d, i); };
+    const original = document.createElement("div");
+    original.className = "orig";
+    if (/\s/.test(l.original.trim())) {
+      for (const part of l.original.split(/(\s+)/)) {
+        if (!part) continue;
+        if (/^\s+$/.test(part)) {
+          original.appendChild(document.createTextNode(part));
+        } else {
+          const word = document.createElement("span");
+          word.className = "word";
+          word.textContent = part;
+          original.appendChild(word);
+        }
+      }
+    } else {
+      original.textContent = l.original;
+    }
+    const pronunciation = document.createElement("div");
+    pronunciation.className = "pron";
+    pronunciation.textContent = l.pronunciation;
+    const translation = document.createElement("div");
+    translation.className = "tran";
+    translation.textContent = l.translation;
+    el.append(original, pronunciation, translation);
+    el.addEventListener("click", () => {
+      stop();
+      speak(d, i);
+    });
     box.appendChild(el);
   });
   document.getElementById("back").onclick = showList;
@@ -63,16 +99,97 @@ async function showSong(id) {
 }
 
 function speak(d, i, onend) {
+  speakText(d, i, d.lines[i].original, onend);
+}
+
+function speakText(d, i, text, onend) {
   const els = document.querySelectorAll(".line");
   els.forEach(e => e.classList.remove("active"));
   els[i].classList.add("active");
   els[i].scrollIntoView({ block: "center", behavior: "smooth" });
-  const u = new SpeechSynthesisUtterance(d.lines[i].original);
+  const u = new SpeechSynthesisUtterance(text);
   u.lang = d.lang_code;
+  const voices = speechSynthesis.getVoices();
+  const lang = d.lang_code.toLowerCase();
+  u.voice = voices.find(voice => voice.lang.toLowerCase() === lang)
+    || voices.find(voice => voice.lang.toLowerCase().split("-")[0] === lang.split("-")[0])
+    || null;
   u.rate = rate;
   u.onend = onend || null;
   speechSynthesis.speak(u);
 }
+
+document.addEventListener("pointerdown", event => {
+  const word = event.target.closest(".word");
+  if (!word || !event.isPrimary || event.button !== 0) return;
+  const line = word.closest(".line");
+  const lineIndex = Array.from(line.parentElement.children).indexOf(line);
+  const wordElements = Array.from(word.parentElement.querySelectorAll(".word"));
+  const words = wordElements.map(item => item.textContent);
+  const wordIndex = wordElements.indexOf(word);
+  const text = words.slice(Math.max(0, wordIndex - 1), wordIndex + 1).join(" ");
+  const press = {
+    word, line, lineIndex, text,
+    pointerId: event.pointerId, x: event.clientX, y: event.clientY,
+    moved: false, triggered: false, timer: null,
+  };
+  activePress = press;
+  word.classList.add("pressing");
+  press.timer = setTimeout(() => {
+    if (activePress !== press || press.moved) return;
+    press.triggered = true;
+    word.classList.remove("pressing");
+    stop();
+    speakText(currentSong, lineIndex, press.text);
+  }, LONG_PRESS_MS);
+}, true);
+
+document.addEventListener("pointermove", event => {
+  const press = activePress;
+  if (!press || event.pointerId !== press.pointerId) return;
+  if (Math.hypot(event.clientX - press.x, event.clientY - press.y) > MOVE_TOLERANCE) {
+    press.moved = true;
+    clearTimeout(press.timer);
+    press.word.classList.remove("pressing");
+  }
+}, true);
+
+function finishPress(event) {
+  const press = activePress;
+  if (!press || event.pointerId !== press.pointerId) return;
+  clearTimeout(press.timer);
+  press.word.classList.remove("pressing");
+  if (press.moved || press.triggered || event.type === "pointercancel") {
+    suppressNextClick = true;
+    clearTimeout(suppressClickTimer);
+    suppressClickTimer = setTimeout(() => { suppressNextClick = false; }, 0);
+  }
+  activePress = null;
+}
+
+document.addEventListener("pointerup", finishPress, true);
+document.addEventListener("pointercancel", finishPress, true);
+function cancelActivePress() {
+  if (activePress) {
+    clearTimeout(activePress.timer);
+    activePress.word.classList.remove("pressing");
+    activePress = null;
+  }
+  suppressNextClick = false;
+  clearTimeout(suppressClickTimer);
+}
+
+document.addEventListener("click", event => {
+  if (!suppressNextClick) return;
+  suppressNextClick = false;
+  clearTimeout(suppressClickTimer);
+  event.preventDefault();
+  event.stopImmediatePropagation();
+}, true);
+
+document.addEventListener("contextmenu", event => {
+  if (event.target.closest(".word")) event.preventDefault();
+});
 
 function playFrom(d, i) {
   if (!playing || i >= d.lines.length) { playing = false; return; }
