@@ -15,8 +15,7 @@
   .line { background: #fff; margin: 8px 0; padding: 10px 14px; border-radius: 8px; box-shadow: 0 1px 3px #0002; cursor: pointer; }
   .line.active { background: #fff3c4; }
   .orig { font-size: 1.15rem; font-weight: bold; }
-  .word { border-bottom: 1px dotted #888; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
-  .word.pressing { background: #e4e8ff; }
+  .word { border-bottom: 1px dotted #888; cursor: pointer; }
   .pron { color: #b03a7a; margin-top: 2px; }
   .tran { color: #555; font-size: .9rem; margin-top: 2px; }
   .bar { display: flex; gap: 8px; align-items: center; margin: 8px 0; flex-wrap: wrap; }
@@ -28,12 +27,9 @@
 <main id="app"></main>
 <script>
 const app = document.getElementById("app");
-let timer = null, playing = false, rate = 0.6, currentSong = null;
-let activePress = null, suppressNextClick = false, suppressClickTimer = null;
-const LONG_PRESS_MS = 500, MOVE_TOLERANCE = 10;
+let timer = null, playing = false, rate = 0.6;
 
 async function showList() {
-  cancelActivePress();
   stop();
   const songs = await (await fetch("songs/index.json")).json();
   app.innerHTML = songs.length ? "" : "<p>曲がまだありません</p>";
@@ -47,17 +43,15 @@ async function showList() {
 }
 
 async function showSong(id) {
-  cancelActivePress();
   stop();
   const d = await (await fetch(`songs/${encodeURIComponent(id)}.json`)).json();
-  currentSong = d;
   app.innerHTML = `
     <div class="bar"><button class="sub" id="back">← 一覧</button>
     <button id="playAll">▶ 発音再生</button>
     <button class="sub" id="stop">■ 停止</button></div>
     <div class="bar"><label>速度 <input type="range" id="rate" min="0.2" max="1" step="0.1" value="${rate}"></label></div>
     <h2>${esc(d.title)} <small>${esc(d.artist || "")}</small></h2>
-    <p class="hint">歌詞をタップ: 行を再生 / 単語を長押し: 直前の単語と合わせて再生</p><div id="lines"></div>`;
+    <p class="hint">先頭の単語・カタカナ・訳語をタップ: 行を再生 / 先頭以外の単語をタップ: 直前の単語と合わせて再生</p><div id="lines"></div>`;
   const box = document.getElementById("lines");
   d.lines.forEach((l, i) => {
     const el = document.createElement("div");
@@ -65,6 +59,8 @@ async function showSong(id) {
     const original = document.createElement("div");
     original.className = "orig";
     if (/\s/.test(l.original.trim())) {
+      const originalWords = l.original.trim().split(/\s+/);
+      let wordIndex = 0;
       for (const part of l.original.split(/(\s+)/)) {
         if (!part) continue;
         if (/^\s+$/.test(part)) {
@@ -73,6 +69,16 @@ async function showSong(id) {
           const word = document.createElement("span");
           word.className = "word";
           word.textContent = part;
+          const index = wordIndex++;
+          word.addEventListener("click", event => {
+            event.stopPropagation();
+            stop();
+            if (index === 0) {
+              speak(d, i);
+              return;
+            }
+            speakText(d, i, `${originalWords[index - 1]} ${part}`);
+          });
           original.appendChild(word);
         }
       }
@@ -118,78 +124,6 @@ function speakText(d, i, text, onend) {
   u.onend = onend || null;
   speechSynthesis.speak(u);
 }
-
-document.addEventListener("pointerdown", event => {
-  const word = event.target.closest(".word");
-  if (!word || !event.isPrimary || event.button !== 0) return;
-  const line = word.closest(".line");
-  const lineIndex = Array.from(line.parentElement.children).indexOf(line);
-  const wordElements = Array.from(word.parentElement.querySelectorAll(".word"));
-  const words = wordElements.map(item => item.textContent);
-  const wordIndex = wordElements.indexOf(word);
-  const text = words.slice(Math.max(0, wordIndex - 1), wordIndex + 1).join(" ");
-  const press = {
-    word, line, lineIndex, text,
-    pointerId: event.pointerId, x: event.clientX, y: event.clientY,
-    moved: false, triggered: false, timer: null,
-  };
-  activePress = press;
-  word.classList.add("pressing");
-  press.timer = setTimeout(() => {
-    if (activePress !== press || press.moved) return;
-    press.triggered = true;
-    word.classList.remove("pressing");
-    stop();
-    speakText(currentSong, lineIndex, press.text);
-  }, LONG_PRESS_MS);
-}, true);
-
-document.addEventListener("pointermove", event => {
-  const press = activePress;
-  if (!press || event.pointerId !== press.pointerId) return;
-  if (Math.hypot(event.clientX - press.x, event.clientY - press.y) > MOVE_TOLERANCE) {
-    press.moved = true;
-    clearTimeout(press.timer);
-    press.word.classList.remove("pressing");
-  }
-}, true);
-
-function finishPress(event) {
-  const press = activePress;
-  if (!press || event.pointerId !== press.pointerId) return;
-  clearTimeout(press.timer);
-  press.word.classList.remove("pressing");
-  if (press.moved || press.triggered || event.type === "pointercancel") {
-    suppressNextClick = true;
-    clearTimeout(suppressClickTimer);
-    suppressClickTimer = setTimeout(() => { suppressNextClick = false; }, 0);
-  }
-  activePress = null;
-}
-
-document.addEventListener("pointerup", finishPress, true);
-document.addEventListener("pointercancel", finishPress, true);
-function cancelActivePress() {
-  if (activePress) {
-    clearTimeout(activePress.timer);
-    activePress.word.classList.remove("pressing");
-    activePress = null;
-  }
-  suppressNextClick = false;
-  clearTimeout(suppressClickTimer);
-}
-
-document.addEventListener("click", event => {
-  if (!suppressNextClick) return;
-  suppressNextClick = false;
-  clearTimeout(suppressClickTimer);
-  event.preventDefault();
-  event.stopImmediatePropagation();
-}, true);
-
-document.addEventListener("contextmenu", event => {
-  if (event.target.closest(".word")) event.preventDefault();
-});
 
 function playFrom(d, i) {
   if (!playing || i >= d.lines.length) { playing = false; return; }
