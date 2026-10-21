@@ -20,6 +20,8 @@
   .tran { color: #555; font-size: .9rem; margin-top: 2px; }
   .bar { display: flex; gap: 8px; align-items: center; margin: 8px 0; flex-wrap: wrap; }
   .hint { color: #666; font-size: .9rem; }
+  .notice { background: #fff8e1; border-left: 4px solid #e0a800; padding: 10px 12px; margin: 12px 0; font-size: .9rem; }
+  .notice p { margin: 4px 0; }
 </style>
 </head>
 <body>
@@ -51,6 +53,11 @@ async function showSong(id) {
     <button class="sub" id="stop">■ 停止</button></div>
     <div class="bar"><label>速度 <input type="range" id="rate" min="0.2" max="1" step="0.1" value="${rate}"></label></div>
     <h2>${esc(d.title)} <small>${esc(d.artist || "")}</small></h2>
+    <aside class="notice">
+      <p><strong>生成モデル：</strong>${esc(d.generation_model || "記録なし")}</p>
+      <p>翻訳はAIによる簡易訳です。文脈や詩的表現などを十分に反映できず、意味が不正確な場合があります。</p>
+      <p>カタカナ表記は発音の目安です。カタカナでは原語の音やアクセントなどを正確に表現できず、実際の発音とは異なります。</p>
+    </aside>
     <p class="hint">先頭の単語・カタカナ・訳語をタップ: 行を再生 / 先頭以外の単語をタップ: 直前の単語と合わせて再生</p><div id="lines"></div>`;
   const box = document.getElementById("lines");
   d.lines.forEach((l, i) => {
