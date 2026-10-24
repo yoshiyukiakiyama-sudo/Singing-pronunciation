@@ -22,6 +22,8 @@
   .hint { color: #666; font-size: .9rem; }
   .notice { background: #fff8e1; border-left: 4px solid #e0a800; padding: 10px 12px; margin: 12px 0; font-size: .9rem; }
   .notice p { margin: 4px 0; }
+  .error { background: #fdecea; border-left: 4px solid #d32f2f; padding: 10px 12px; margin: 12px 0; font-size: .95rem; }
+  .error small { display: block; color: #777; margin-top: 4px; }
 </style>
 </head>
 <body>
@@ -31,9 +33,31 @@
 const app = document.getElementById("app");
 let timer = null, playing = false, rate = 0.6;
 
+function errorHtml(text, detail) {
+  return `<div class="error">${esc(text)}${detail ? `<small>（詳細: ${esc(detail)}）</small>` : ""}</div>`;
+}
+
+async function fetchJson(url) {
+  const res = await fetch(url, { cache: "no-cache" });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
+function showSpeechMessage(text) {
+  let box = document.getElementById("speechMsg");
+  if (!box) return;
+  box.innerHTML = text ? errorHtml(text) : "";
+}
+
 async function showList() {
   stop();
-  const songs = await (await fetch("songs/index.json")).json();
+  let songs;
+  try {
+    songs = await fetchJson("songs/index.json");
+  } catch (e) {
+    app.innerHTML = errorHtml("曲の一覧を読み込めませんでした。通信状況を確認して、ページを再読み込みしてください。", e.message);
+    return;
+  }
   app.innerHTML = songs.length ? "" : "<p>曲がまだありません</p>";
   for (const s of songs) {
     const b = document.createElement("button");
@@ -46,12 +70,21 @@ async function showList() {
 
 async function showSong(id) {
   stop();
-  const d = await (await fetch(`songs/${encodeURIComponent(id)}.json`)).json();
+  let d;
+  try {
+    d = await fetchJson(`songs/${encodeURIComponent(id)}.json`);
+  } catch (e) {
+    app.innerHTML = `<div class="bar"><button class="sub" id="back">← 一覧</button></div>`
+      + errorHtml("曲のデータを読み込めませんでした。通信状況を確認して、もう一度お試しください。", e.message);
+    document.getElementById("back").onclick = showList;
+    return;
+  }
   app.innerHTML = `
     <div class="bar"><button class="sub" id="back">← 一覧</button>
     <button id="playAll">▶ 発音再生</button>
     <button class="sub" id="stop">■ 停止</button></div>
     <div class="bar"><label>速度 <input type="range" id="rate" min="0.2" max="1" step="0.1" value="${rate}"></label></div>
+    <div id="speechMsg"></div>
     <h2>${esc(d.title)} <small>${esc(d.artist || "")}</small></h2>
     <aside class="notice">
       <p><strong>生成モデル：</strong>${esc(d.generation_model || "記録なし")}</p>
@@ -120,16 +153,36 @@ function speakText(d, i, text, onend) {
   els.forEach(e => e.classList.remove("active"));
   els[i].classList.add("active");
   els[i].scrollIntoView({ block: "center", behavior: "smooth" });
+  if (!("speechSynthesis" in window)) {
+    showSpeechMessage("このブラウザは音声再生に対応していません。ChromeやEdgeなど別のブラウザでお試しください。");
+    playing = false;
+    return;
+  }
   const u = new SpeechSynthesisUtterance(text);
   u.lang = d.lang_code;
   const voices = speechSynthesis.getVoices();
   const lang = d.lang_code.toLowerCase();
-  u.voice = voices.find(voice => voice.lang.toLowerCase() === lang)
-    || voices.find(voice => voice.lang.toLowerCase().split("-")[0] === lang.split("-")[0])
+  const voice = voices.find(v => v.lang.toLowerCase().replace("_", "-") === lang)
+    || voices.find(v => v.lang.toLowerCase().replace("_", "-").split("-")[0] === lang.split("-")[0])
     || null;
+  u.voice = voice;
+  if (voice) {
+    showSpeechMessage("");
+  } else if (voices.length) {
+    showSpeechMessage(`この端末には${d.language || "この言語"}の音声が入っていないため、音が出ない、または正しく読み上げられない場合があります。端末の設定で音声データを追加してください。`);
+  }
   u.rate = rate;
   u.onend = onend || null;
+  u.onerror = e => {
+    if (e.error === "canceled" || e.error === "interrupted") return;
+    playing = false;
+    showSpeechMessage("音声を再生できませんでした。端末の音量や、音声データの追加をご確認ください。");
+  };
   speechSynthesis.speak(u);
+}
+
+if ("speechSynthesis" in window) {
+  speechSynthesis.getVoices();
 }
 
 function playFrom(d, i) {
@@ -140,7 +193,7 @@ function playFrom(d, i) {
 function stop() {
   playing = false;
   clearTimeout(timer);
-  speechSynthesis.cancel();
+  if ("speechSynthesis" in window) speechSynthesis.cancel();
 }
 
 function esc(s) {
