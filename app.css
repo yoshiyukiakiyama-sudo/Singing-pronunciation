@@ -1,0 +1,21 @@
+body { font-family: sans-serif; margin: 0; background: #f6f7fb; color: #222; }
+header { background: #4a5bd4; color: #fff; padding: 12px 16px; position: sticky; top: 0; z-index: 1; }
+h1 { font-size: 1.1rem; margin: 0; }
+h1 small { font-weight: normal; margin-left: 8px; }
+main { padding: 12px; max-width: 720px; margin: auto; }
+button { font-size: 1rem; padding: 10px 16px; border: 0; border-radius: 8px; background: #4a5bd4; color: #fff; }
+button.sub { background: #888; }
+.song { display: block; width: 100%; text-align: left; background: #fff; color: #222; margin: 8px 0; padding: 14px; box-shadow: 0 1px 3px #0003; }
+.song .badge { color: #4a5bd4; }
+.line { background: #fff; margin: 8px 0; padding: 10px 14px; border-radius: 8px; box-shadow: 0 1px 3px #0002; cursor: pointer; }
+.line.active { background: #fff3c4; }
+.orig { font-size: 1.15rem; font-weight: bold; }
+.word { border-bottom: 1px dotted #888; cursor: pointer; }
+.pron { color: #b03a7a; margin-top: 2px; }
+.tran { color: #555; font-size: .9rem; margin-top: 2px; }
+.bar { display: flex; gap: 8px; align-items: center; margin: 8px 0; flex-wrap: wrap; }
+.hint { color: #666; font-size: .9rem; }
+.notice { background: #fff8e1; border-left: 4px solid #e0a800; padding: 10px 12px; margin: 12px 0; font-size: .9rem; }
+.notice p { margin: 4px 0; }
+.error { background: #fdecea; border-left: 4px solid #d32f2f; padding: 10px 12px; margin: 12px 0; font-size: .95rem; }
+.error small { display: block; color: #777; margin-top: 4px; }

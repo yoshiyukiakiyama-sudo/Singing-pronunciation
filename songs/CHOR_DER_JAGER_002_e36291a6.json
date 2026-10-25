@@ -1,0 +1,104 @@
+{
+  "title": "CHOR_DER_JAGER 002",
+  "artist": "Weber",
+  "language": "ドイツ語",
+  "lang_code": "de-DE",
+  "generation_model": "gemini-3.8-flash",
+  "lines": [
+    {
+      "original": "CHOR DER JÄGER",
+      "translation": "狩人の合唱",
+      "pronunciation": "コール デア イェーガー"
+    },
+    {
+      "original": "Was gleicht wohl auf Erden dem Jägervergnügen,",
+      "translation": "地上で狩人の喜びに匹敵するものがあろうか、",
+      "pronunciation": "ヴァス グライヒト ヴォール アウフ エールデン デム イェーガーフェアグニューゲン"
+    },
+    {
+      "original": "Wem sprudelt der Becher des Lebens so reich?",
+      "translation": "命の杯がこれほど豊かに湧き出る者が他にいるだろうか？",
+      "pronunciation": "ヴェム シュプルーデルト デア ベヒャー デス レーベンス ソー ライヒ"
+    },
+    {
+      "original": "Beim Klange der Hörner im Grünen zu liegen,",
+      "translation": "角笛の響きを聞きながら緑の中に憩い、",
+      "pronunciation": "バイム クランゲ デア ヘルナー イム グリューネン ツー リーゲン"
+    },
+    {
+      "original": "Den Hirsch zu verfolgen durch Dickicht und Teich",
+      "translation": "茂みや池を越えて鹿を追うことは、",
+      "pronunciation": "デン ヒルシュ ツー フェアフォルゲン ドゥルヒ ディッキヒト ウント タイヒ"
+    },
+    {
+      "original": "Ist fürstliche Freude, ist männlich Verlangen,",
+      "translation": "君主のような喜びであり、男らしい憧れである。",
+      "pronunciation": "イスト フュルストリヒェ フロイデ イスト メンリヒ フェアランゲン"
+    },
+    {
+      "original": "Erstarket die Glieder und würzet das Mahl.",
+      "translation": "手足を力づけ、食事を美味しくさせる。",
+      "pronunciation": "エアシュタルケット ディー グリーダー ウント ヴュルツェト ダス マール"
+    },
+    {
+      "original": "Wenn Wälder und Felsen uns hallend umfangen,",
+      "translation": "森と岩山がこだまとなって我らを包むとき、",
+      "pronunciation": "ヴェン ヴェルダー ウント フェルゼン ウンス ハレント ウムファンゲン"
+    },
+    {
+      "original": "Tönt freier und freud'ger der volle Pokal!",
+      "translation": "なみなみと満ちた杯の乾杯の音は、より晴れやかに、より喜びに満ちて響く！",
+      "pronunciation": "テント フライアー ウント フロイトガー デア フォレ ポカール"
+    },
+    {
+      "original": "Jo ho! Tralalalala!",
+      "translation": "ヨーホー！トラララララ！",
+      "pronunciation": "ヨー ホー トラララララ"
+    },
+    {
+      "original": "Diana ist kundig, die Nacht zu erhellen,",
+      "translation": "ディアナ（月の女神）は夜を照らす術を知っており、",
+      "pronunciation": "ディアーナ イスト クンディヒ ディー ナハト ツー エアヘレン"
+    },
+    {
+      "original": "Wie labend am Tage ihr Dunkel uns kühlt.",
+      "translation": "昼間には彼女の木陰がなんと爽やかに我らを涼めてくれることか。",
+      "pronunciation": "ヴィー ラーベント アム ターゲ イーア ドゥンケル ウンス キュールト"
+    },
+    {
+      "original": "Den blutigen Wolf und den Eber zu fällen,",
+      "translation": "血に飢えた狼や猪を仕留めることは、",
+      "pronunciation": "デン ブルーティゲン ヴォルフ ウント デン エーバー ツー フェレン"
+    },
+    {
+      "original": "Der gierig die grünenden Saaten durchwühlt,",
+      "translation": "青々と実る畑を貪欲に荒らし回る奴らを、",
+      "pronunciation": "デア ギーリヒ ディー グリューネンデン ザーテン ドゥルヒヴュールト"
+    },
+    {
+      "original": "Ist fürstliche Freude, ist männlich Verlangen,",
+      "translation": "君主のような喜びであり、男らしい憧れである。",
+      "pronunciation": "イスト フュルストリヒェ フロイデ イスト メンリヒ フェアランゲン"
+    },
+    {
+      "original": "Erstarket die Glieder und würzet das Mahl.",
+      "translation": "手足を力づけ、食事を美味しくさせる。",
+      "pronunciation": "エアシュタルケット ディー グリーダー ウント ヴュルツェト ダス マール"
+    },
+    {
+      "original": "Wenn Wälder und Felsen uns hallend umfangen,",
+      "translation": "森と岩山がこだまとなって我らを包むとき、",
+      "pronunciation": "ヴェン ヴェルダー ウント フェルゼン ウンス ハレント ウムファンゲン"
+    },
+    {
+      "original": "Tönt freier und freud'ger der volle Pokal!",
+      "translation": "なみなみと満ちた杯の乾杯の音は、より晴れやかに、より喜びに満ちて響く！",
+      "pronunciation": "テント フライアー ウント フロイトガー デア フォレ ポカール"
+    },
+    {
+      "original": "Jo ho! Tralalalala!",
+      "translation": "ヨーホー！トラララララ！",
+      "pronunciation": "ヨー ホー トラララララ"
+    }
+  ]
+}

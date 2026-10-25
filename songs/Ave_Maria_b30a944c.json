@@ -1,0 +1,121 @@
+{
+  "title": "Ave Maria",
+  "artist": "",
+  "language": "ラテン語",
+  "lang_code": "la",
+  "generation_model": "gemini-3.8-flash",
+  "lines": [
+    {
+      "original": "Ave Maria, gratia plena,",
+      "translation": "めでたしマリア、恵みに満ちた方、",
+      "pronunciation": "アーヴェ マリア グラツィア プレーナ"
+    },
+    {
+      "original": "Dominus tecum,",
+      "translation": "主はあなたとともにおられます、",
+      "pronunciation": "ドミヌス テークム"
+    },
+    {
+      "original": "benedicta tu in mulieribus,",
+      "translation": "あなたは女のうちで祝福され、",
+      "pronunciation": "ベネディクタ トゥ イン ムリエリブス"
+    },
+    {
+      "original": "et benedictus fructus ventris tui Jesus.",
+      "translation": "あなたの胎内の実りであるイエスも祝福されています。",
+      "pronunciation": "エト ベネディクトゥス フルクトゥス ヴェントリス トゥイ イエスス"
+    },
+    {
+      "original": "Sancta Maria mater Dei,",
+      "translation": "聖マリア、神の母よ、",
+      "pronunciation": "サンクタ マリア マーテル デイ"
+    },
+    {
+      "original": "ora pro nobis peccatoribus,",
+      "translation": "わたしたち罪人のために祈ってください、",
+      "pronunciation": "オーラ プロ ノービス ペッカトーリブス"
+    },
+    {
+      "original": "nunc, et in hora mortis nostrae.",
+      "translation": "今も、そしてわたしたちの死の時にも。",
+      "pronunciation": "ヌンク エト イン ホーラ モルティス ノストレ"
+    }
+  ],
+  "audio": {
+    "provider": "gemini-lite",
+    "model": "gemini-3.8-flash-lite-tts",
+    "voice": "Kore",
+    "lines": [
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fd4ef44b111021cf8715e2f1b42d9fd3adb192c62.mp3?alt=media&token=22dd8f48-1fcd-47e3-a656-273f3fc49ce2",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F476c2f09769091f1bcc076052f50b66bc73b3e1f.mp3?alt=media&token=35f2dc41-9776-4e4c-bf51-440440bd2838",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 1,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F8150aa6c069488dff460424078c3a6d7d10be730.mp3?alt=media&token=456bb5a7-e21e-4c6f-9af1-171a23e100a8",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fe603e5ac26b1eaa4a18c31615f974f96f48af129.mp3?alt=media&token=87216222-85c5-4c4d-ba2c-a75b7166029e"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fc29102fc83e96dda036ff63fcc4abf190e20a91e.mp3?alt=media&token=3128741b-8123-43bd-929f-e1e25d38142a",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F8f651bf5962fd10fe600727ddcc063dd6532737c.mp3?alt=media&token=cddd584d-9523-43dc-9ff6-9a0b4b8954e2"
+          }
+        ]
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fe9bcef11d8a13ea217ca071a68e0b85ccdb529cb.mp3?alt=media&token=ac61cde3-5176-4b52-8175-ec1af470872a",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F0f14057dfe45c08654ab6f8f66ac7a1c708d47e9.mp3?alt=media&token=875977be-9885-4c83-8f1e-e946b0a4a269"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F202d05b02c5eb904112471997e9beb4c2f913dd3.mp3?alt=media&token=cf08a2b9-8bb9-4f67-9bde-aeb6c630517a",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fcc14292fb07aa3ef5e377af25f120287e45b30e2.mp3?alt=media&token=4a247b35-be95-47ff-9b2c-0e5e9d163cb4"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Ffc41dee5454efd7944102d58da002913198b50a0.mp3?alt=media&token=da52e362-3069-482e-a645-1eaad736a1ff",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fda953d5b7cd7dbcba69e008885716faac3c66454.mp3?alt=media&token=62f92530-f64d-4d8d-ac4f-c12bf9d0169a",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 2,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Ffe9cf9d2ed5d727addf9cf59f44379182ac5e1d4.mp3?alt=media&token=0e90e41b-3da1-486c-8e26-53f5cf1cb697",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F61efb5f507e5114a4076adff5d2528c4434f075d.mp3?alt=media&token=b0e00724-0a5c-4e3f-b8ac-02806fafb1c8"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F70d387c46ab1071d86d79a8c3eea09ea25ec3138.mp3?alt=media&token=8b7319fc-8b09-4972-b3da-9d1bab533862",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F6daf94498d492b8e9087c320936cacf3f7f954bd.mp3?alt=media&token=6aabedd4-5957-4fb6-9fc7-5618e93b4e37"
+          }
+        ]
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fb32b643ef166665d63a4e8901d4b5366fd1520be.mp3?alt=media&token=3dbc7138-5ac8-477d-864e-0bfb53214931",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F93b5bbaea6360fe3b8eb29a0870b1ee7f8228ed2.mp3?alt=media&token=1600197f-9802-4220-90f7-bdc60f614369"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fd9c25f8d479a20d66096fd65c7bc3cce79bb24ce.mp3?alt=media&token=51b9d465-5b3b-44a0-971c-847c2d03b378",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F881b68379dc722dd55fc2b7f76fc653ada45a596.mp3?alt=media&token=3d5327ef-1cf7-4c1a-a443-dc9871e1df52"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F0595fd3434440d4a7656aeba6c98df272c3c98a8.mp3?alt=media&token=04f92dc2-ff16-4078-90dc-d03c3d5b5644",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fb7ea34cb1451a90984cc1fcb63bbbd1f1ed6e608.mp3?alt=media&token=ba21ee4d-6de0-4b4b-a0a7-097528acd57e",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 0,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fc2344faf49cad1b82005f504699067c04c92797d.mp3?alt=media&token=11bc5060-b17b-48d8-ae8b-f82e219e8e33",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2Fe17d7fcc81abba5f9aa564369ec37143f53de5ff.mp3?alt=media&token=18d3dde2-7acb-4fe7-8ec4-7d379c33316e"
+          },
+          {
+            "start": 1,
+            "end": 5,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F547056b8356355633acc2377466b450d11c4aad4.mp3?alt=media&token=2c5ccac8-3ae4-430d-a45f-d5f0d14d7d10",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FAve_Maria_b30a944c%2F86f62afa88a68f0c5a573c5b1021cc703cf8a972.mp3?alt=media&token=9a996fb4-64e1-43d9-909a-722b219b364d"
+          }
+        ]
+      }
+    ]
+  }
+}

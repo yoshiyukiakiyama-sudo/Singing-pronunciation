@@ -1,0 +1,49 @@
+{
+  "title": "カンタータ 第147番",
+  "artist": "",
+  "language": "ドイツ語",
+  "lang_code": "de-DE",
+  "generation_model": "gemini-3.8-flash",
+  "lines": [
+    {
+      "original": "Wohl mir, daß ich Jesum habe,",
+      "translation": "私には何と幸いなことか、イエスがおられることは、",
+      "pronunciation": "ヴォール ミーア ダス イッヒ イェーズム ハーベ"
+    },
+    {
+      "original": "O wie feste halt ich ihn,",
+      "translation": "おお、何と固く私は主を抱きとめていることか、",
+      "pronunciation": "オー ヴィー フェステ ハルト イッヒ イーン"
+    },
+    {
+      "original": "Daß er mir mein Herze labe,",
+      "translation": "主が私の心を潤し力づけてくださるように、",
+      "pronunciation": "ダス エーア ミーア マイン ヘルツェ ラーベ"
+    },
+    {
+      "original": "Wenn ich krank und traurig bin.",
+      "translation": "私が病み、悲しんでいるときに。",
+      "pronunciation": "ヴェン イッヒ クランク ウント トラウリッヒ ビン"
+    },
+    {
+      "original": "Jesum hab ich, der mich liebet",
+      "translation": "私を愛してくださるイエスを私は持っている、",
+      "pronunciation": "イェーズム ハプ イッヒ デーア ミッヒ リーベト"
+    },
+    {
+      "original": "Und sich mir zu eigen gibet;",
+      "translation": "そしてご自身を私のものとして与えてくださる主を。",
+      "pronunciation": "ウント ジッヒ ミーア ツー アイゲン ギーベト"
+    },
+    {
+      "original": "Ach drum laß ich Jesum nicht,",
+      "translation": "ああ、それゆえ私はイエスを決して離さない、",
+      "pronunciation": "アハ ドルム ラス イッヒ イェーズム ニヒト"
+    },
+    {
+      "original": "Wenn mir gleich mein Herze bricht.",
+      "translation": "たとえ私の心が砕け散ろうとも。",
+      "pronunciation": "ヴェン ミーア グライヒ マイン ヘルツェ ブリヒト"
+    }
+  ]
+}
