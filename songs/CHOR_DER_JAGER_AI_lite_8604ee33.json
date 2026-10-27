@@ -1,0 +1,183 @@
+{
+  "title": "CHOR DER JÄGER (AI音声 lite)",
+  "artist": "von Weber / Kin",
+  "language": "ドイツ語",
+  "lang_code": "de-DE",
+  "generation_model": "gemini-3.8-flash",
+  "lines": [
+    {
+      "original": "Was gleicht wohl auf Erden dem Jägervergnügen,",
+      "translation": "この世で狩人の楽しみに匹敵するものがあろうか、",
+      "pronunciation": "ヴァス グライヒト ヴォール アウフ エールデン デーム イェーガーフェアグニューゲン"
+    },
+    {
+      "original": "Wem sprudelt der Becher des Lebens so reich?",
+      "translation": "誰に命の杯がこれほど豊かに湧き出るだろうか？",
+      "pronunciation": "ヴェーム シュプルーデルト デア ベッヒャー デス レーベンス ソー ライヒ"
+    },
+    {
+      "original": "Beim Klange der Hörner im Grünen zu liegen,",
+      "translation": "角笛の響きを聞きながら緑の中に横たわり、",
+      "pronunciation": "バイム クランゲ デア ヘルナー イム グリューネン ツー リーゲン"
+    },
+    {
+      "original": "Den Hirsch zu verfolgen durch Dickicht und Teich",
+      "translation": "茂みや池を抜けて鹿を追いかけることは、",
+      "pronunciation": "デン ヒルシュ ツー フェアフォルゲン ドゥルヒ ディッキヒト ウント タイヒ"
+    },
+    {
+      "original": "Ist fürstliche Freude, ist männlich Verlangen,",
+      "translation": "君主の喜びであり、男らしい熱望であり、",
+      "pronunciation": "イスト フュルストリッヒェ フロイデ イスト メンリヒ フェアランゲン"
+    },
+    {
+      "original": "Erstarket die Glieder und würzet das Mahl.",
+      "translation": "手足を逞しくし、食事を美味にする。",
+      "pronunciation": "エアシュタルケット ディー グリーダー ウント ヴュルツェト ダス マール"
+    },
+    {
+      "original": "Wenn Wälder und Felsen uns hallend umfangen,",
+      "translation": "森と岩山が反響しながら我らを取り囲むとき、",
+      "pronunciation": "ヴェン ヴェルダー ウント フェルゼン ウンス ハレント ウムファンゲン"
+    },
+    {
+      "original": "Tönt freier und freud'ger der volle Pokal!",
+      "translation": "満たされた杯はより晴れやかに、より喜ばしく鳴り響く！",
+      "pronunciation": "テント フライアー ウント フロイトガー デア フォレ ポカール"
+    },
+    {
+      "original": "Jo ho! Tralalalala!",
+      "translation": "ヨーホー！トラララララ！",
+      "pronunciation": "ヨー ホー トラララララ"
+    },
+    {
+      "original": "Diana ist kundig, die Nacht zu erhellen,",
+      "translation": "ディアナは夜を照らす術を心得ており、",
+      "pronunciation": "ディアーナ イスト クンディヒ ディー ナハト ツー エルヘレン"
+    },
+    {
+      "original": "Wie labend am Tage ihr Dunkel uns kühlt.",
+      "translation": "昼間にはその暗がりがなんと心地よく我らを涼ませてくれることか。",
+      "pronunciation": "ヴィー ラーベント アム ターゲ イーア ドゥンケル ウンス キュールト"
+    },
+    {
+      "original": "Den blutigen Wolf und den Eber zu fällen,",
+      "translation": "血に飢えた狼や猪を仕留めることは、",
+      "pronunciation": "デン ブルーティゲン ヴォルフ ウント デン エーバー ツー フェレン"
+    },
+    {
+      "original": "Der gierig die grünenden Saaten durchwühlt,",
+      "translation": "青々とした作物を貪欲に荒らし回る奴らを、",
+      "pronunciation": "デア ギーリヒ ディー グリューネンデン ザーテン ドゥルヒヴュールト"
+    },
+    {
+      "original": "Ist fürstliche Freude, ist männlich Verlangen,",
+      "translation": "君主の喜びであり、男らしい熱望であり、",
+      "pronunciation": "イスト フュルストリッヒェ フロイデ イスト メンリヒ フェアランゲン"
+    },
+    {
+      "original": "Erstarket die Glieder und würzet das Mahl.",
+      "translation": "手足を逞しくし、食事を美味にする。",
+      "pronunciation": "エアシュタルケット ディー グリーダー ウント ヴュルツェト ダス マール"
+    },
+    {
+      "original": "Wenn Wälder und Felsen uns hallend umfangen,",
+      "translation": "森と岩山が反響しながら我らを取り囲むとき、",
+      "pronunciation": "ヴェン ヴェルダー ウント フェルゼン ウンス ハレント ウムファンゲン"
+    },
+    {
+      "original": "Tönt freier und freud'ger der volle Pokal!",
+      "translation": "満たされた杯はより晴れやかに、より喜ばしく鳴り響く！",
+      "pronunciation": "テント フライアー ウント フロイトガー デア フォレ ポカール"
+    },
+    {
+      "original": "Jo ho! Tralalalala!",
+      "translation": "ヨーホー！トラララララ！",
+      "pronunciation": "ヨー ホー トラララララ"
+    }
+  ],
+  "audio": {
+    "provider": "cloud",
+    "model": "Google Cloud Text-to-Speech",
+    "voice": "de-DE-Neural2-B",
+    "speeds": [
+      "n",
+      "s"
+    ],
+    "phrases": false,
+    "lines": [
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F06e8c861e59c54409e8536c20086a518771923c4.mp3?alt=media&token=7979495f-c608-4a7e-a26e-279ec8dfb85c",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2Ffcdd9d9de8378d62a3da53d2201e54f6b5d81159.mp3?alt=media&token=742187cd-ea30-4375-890b-2c409cd7b1db"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2Fad48cd6868f5623c1def526a7413cfd943ffbf39.mp3?alt=media&token=72d625f5-9972-428a-8a66-783d0b222a07",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F6c39796a27253b6b937ae9f8e82c847023353cff.mp3?alt=media&token=00017c74-0aa1-42de-9b81-32f7f0adf9a6"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F2e5612a7737f4842a53a73a0d3637cd78657df24.mp3?alt=media&token=b9db3aa4-10a8-4ee9-87f2-33f5080df118",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F01d67af4b14f6604f3237f62efe0d00cbd626c27.mp3?alt=media&token=89c0b243-5667-4cc8-8474-57bb0fe7f5a4"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2Fa19f817d7ae92fb102063bee246d9fa63c6b1e95.mp3?alt=media&token=a81a19e1-c598-48b8-afd0-2dc1683b4474",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F74a65196c164e0beb04a031464a0444f28d6bf6f.mp3?alt=media&token=df587bc2-a4d5-43b7-a8a6-17934a3f5a1c"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F51d4844054bb930c2d56e8f867513284c3a20f45.mp3?alt=media&token=3b1a726d-5d53-49d9-b998-ab79f0e33856",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F7fe95ff78573285cf83a9492bbffcfccdadbf370.mp3?alt=media&token=cdda5b33-7b5a-4d02-acfe-78a69d6b3eff"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2Fe6053da3624cad862a334eae0e3526c3e8b55998.mp3?alt=media&token=e5f956d3-defd-4c51-90c3-964582c5e35a",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2Fa3f1f23442c503e665ff2d12aded42fd5ea2ff76.mp3?alt=media&token=26952aa7-213a-42f4-8713-e7ec68797e1d"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F1e8741b62740b76dce8389f18e10ab2796ab802c.mp3?alt=media&token=7fb05c73-6f1f-4782-802d-5f43de4d8afb",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2Ffe46ce9a0e22290a629ef9d96e1b10d7cac5dd80.mp3?alt=media&token=e275db33-0562-49af-810c-43b0aff5b41c"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F5b7bf8388aefdb1e3f7009b7e0753a7fff44598f.mp3?alt=media&token=cef73e88-0572-4198-a080-0ac2e0cd167b",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F38b82d7042d1dea3fef4cfd15a94edfcc4872726.mp3?alt=media&token=58781ee2-d3d2-4243-af81-f6616e935943"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F86d9581deff9a241e6cfa76b80aaf7607a702abe.mp3?alt=media&token=c24b32d6-de29-4def-a5de-933de6eabe4f",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F4bb96b585599fda7238c59fc561a91f2980ffcf1.mp3?alt=media&token=6ab39c6e-fd23-4705-8af9-fd3c455eccf9"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F90ce1cacb54cbec0601bc616c0af0684cc4fc78b.mp3?alt=media&token=a557b31a-db55-4c7e-a41a-f9d44fd2240f",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F4f090f42d6edfcd6d1f770c2b633ca6f5956d31c.mp3?alt=media&token=d241b2ad-ac34-4e60-a6a7-3e58d63b1cd3"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F7e3ca52be44a9dbed5c2c7c2e737866f3a92d8c6.mp3?alt=media&token=e4fe798b-7bcc-4ebb-a06c-c62bcdaf8f8d",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F3778bd2fcd5461016c36ffd6f711534a62ef10ff.mp3?alt=media&token=188036b3-55f1-485a-a7ff-369a384bb7bb"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F1da3fa895ceac155859c10f2b8dd55700d74da42.mp3?alt=media&token=eaafa492-75da-430b-8688-4ac18c83fb8c",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2Fe46074d00e0f42e612370a5a1a369b4ade466b08.mp3?alt=media&token=c6279055-67f8-4ec1-b198-8b29f96b8ad8"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F6e93a1547c18cce056317dbb8715dbe17739182c.mp3?alt=media&token=246347b8-e205-4557-a5ce-d57e13a021c3",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F83e3ae65af780867bd419f9681d6aba7b44c93ba.mp3?alt=media&token=b9af4fd4-699e-4f92-a35d-6f166f01fb59"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F51d4844054bb930c2d56e8f867513284c3a20f45.mp3?alt=media&token=3b1a726d-5d53-49d9-b998-ab79f0e33856",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F7fe95ff78573285cf83a9492bbffcfccdadbf370.mp3?alt=media&token=cdda5b33-7b5a-4d02-acfe-78a69d6b3eff"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2Fe6053da3624cad862a334eae0e3526c3e8b55998.mp3?alt=media&token=e5f956d3-defd-4c51-90c3-964582c5e35a",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2Fa3f1f23442c503e665ff2d12aded42fd5ea2ff76.mp3?alt=media&token=26952aa7-213a-42f4-8713-e7ec68797e1d"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F1e8741b62740b76dce8389f18e10ab2796ab802c.mp3?alt=media&token=7fb05c73-6f1f-4782-802d-5f43de4d8afb",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2Ffe46ce9a0e22290a629ef9d96e1b10d7cac5dd80.mp3?alt=media&token=e275db33-0562-49af-810c-43b0aff5b41c"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F5b7bf8388aefdb1e3f7009b7e0753a7fff44598f.mp3?alt=media&token=cef73e88-0572-4198-a080-0ac2e0cd167b",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F38b82d7042d1dea3fef4cfd15a94edfcc4872726.mp3?alt=media&token=58781ee2-d3d2-4243-af81-f6616e935943"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F86d9581deff9a241e6cfa76b80aaf7607a702abe.mp3?alt=media&token=c24b32d6-de29-4def-a5de-933de6eabe4f",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FCHOR_DER_JAGER_AI_lite_8604ee33%2F4bb96b585599fda7238c59fc561a91f2980ffcf1.mp3?alt=media&token=6ab39c6e-fd23-4705-8af9-fd3c455eccf9"
+      }
+    ]
+  }
+}

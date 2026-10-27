@@ -45,5 +45,156 @@
       "translation": "たとえ私の心が打ち砕かれようとも。",
       "pronunciation": "ヴェン ミール グライヒ マイン ヘルツェ ブリヒト"
     }
-  ]
+  ],
+  "audio": {
+    "provider": "cloud",
+    "model": "Google Cloud Text-to-Speech",
+    "voice": "de-DE-Neural2-B",
+    "lines": [
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F4d9cc9c34da38af660b38feb78f574371db673e9.mp3?alt=media&token=b56876e0-3503-4a64-83f8-73a339bbfde8",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F297b72fed146d5d479ee53ca3ac4d672ec3c613c.mp3?alt=media&token=041a58d7-4e5d-423f-9f1b-e5404d8cec4c",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 1,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F7ed6c60bf3084191622c97a93bcad242c95e45a8.mp3?alt=media&token=c758df62-0f34-4e28-b557-7c5f81a9b3de",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F72864046628ce19022890c510c84f3a49e7bc09e.mp3?alt=media&token=d0166d7e-3880-47a9-bea4-57fa49f5477e"
+          },
+          {
+            "start": 2,
+            "end": 5,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F7482b5dc5731902b7ccdf1258c22129a73f4aaeb.mp3?alt=media&token=17918d3f-f71b-4296-9a0a-c403c793b16a",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fba9a5c60eeda5ffac4f1dcc739b6027a6ddd5a0e.mp3?alt=media&token=7aa23d00-9b06-4081-8cb9-44d025d2c640"
+          }
+        ]
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F9294b1c23c044bb5fadce0fef6f3fee0aed45b12.mp3?alt=media&token=bfc32cbc-e2a7-4743-a531-29eb75bcdbf2",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F3d3b8359fee3f8740bb6f9d63376144856dac052.mp3?alt=media&token=a7498cd5-11b1-463c-89c4-c39ac4c01c22",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 2,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fdb0eb947a577c5ea0b1bf3c48aabddb12a261cfb.mp3?alt=media&token=66cfe741-a33b-4d32-84ca-eb84d4453a57",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Ffa1118209690e9cda45dbb7189c9061d02879b3b.mp3?alt=media&token=ec066d02-0dcd-4828-b0a8-7f338f8ca8f0"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F2f04fa278fecf2d43d283c488e227a5aa38ad3f4.mp3?alt=media&token=cff76883-bd4c-4171-9f23-834a1e80e9ca",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F3aa7621b6386265bfbe5523d4c4f7c80553cb948.mp3?alt=media&token=76c174c8-0a4f-4bc7-81a1-1ec2ecb2f3bd"
+          }
+        ]
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F93faa1962c598b4bdcf8950b96180a818693f1cc.mp3?alt=media&token=6b50088f-99b3-4219-b0f3-f0706f07ebb8",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F5d58e35cbc5ad92cf67afdc88ae127f9cb78c5dc.mp3?alt=media&token=7b736367-1ec4-4156-b3f4-0b467e03c0fd",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 2,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F97872fae58979f1f949a83fd6e60eb6db18d69be.mp3?alt=media&token=b98ce428-949f-47dc-8caf-523640559030",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F9af00490f5a8c123d193162e9b13a180ea7df9f0.mp3?alt=media&token=71b4196e-2cd3-425c-af19-340efb25f3b1"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F293a4687cbcebafc9ec732d47f254c37fdeb0b81.mp3?alt=media&token=49233be7-a9d9-4efc-96b8-174bde8d80e5",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F09c0879f0c39c9994d2830a5b6f5cf20c40bfa59.mp3?alt=media&token=0b3a781e-8f7f-487c-8f14-996f770a6eff"
+          }
+        ]
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fe5ab26d419cfdc152fbbba7e0759f482d57f002a.mp3?alt=media&token=3e548dca-7ade-4752-92b0-939ced4a2fc1",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fd0fcb9335c198df876ef1aa3a231b40f24adba80.mp3?alt=media&token=68283e13-0394-4afb-9e24-3e901181365d",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 2,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fa7f54fccdc7d1dfde8274be5b45f68b7ae5af22f.mp3?alt=media&token=208734d3-90c3-49ba-a3cd-69fcdd4a425a",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fb4577f73a1f6ade9d247258f794ae712fc54526e.mp3?alt=media&token=7f375f75-9c65-4127-9e74-15152fbb9ace"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fd3fad36530212fe51fce6e3dc16aeab564b2ed1d.mp3?alt=media&token=ca1fb8d8-9ce4-466c-a4d6-cb998a17b3f0",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fff91efecd85f211e53bd0887ef82d900fa9b7b67.mp3?alt=media&token=eca723f9-d9ec-4479-acb7-e920973f0c16"
+          }
+        ]
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F1f066d00949611170359f479c3784c57cb3d900e.mp3?alt=media&token=436bf36b-b012-4b7f-b4c2-49d809de6878",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fa71ff66c1b81e8cba881b571e30b7ce445ba26a1.mp3?alt=media&token=c4b136e3-f5fe-4591-804f-cc23d50b0d7a",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 2,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F3485d8ca047104bb69808e2b45ebe5196ea2049d.mp3?alt=media&token=6f41e241-3537-4a3a-821c-373ebe3bb3d5",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F912cd45896daa74ae8ce07e754ec85df1c986451.mp3?alt=media&token=e06f83f0-96d4-4f6b-8a52-559d221deee9"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F068486f624ac44adbf0de08d20e566a233f207fa.mp3?alt=media&token=d9e5a702-21d1-466e-80d7-3c9c88747bef",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Ff2ac66434d3da7e65eb20d93710cc8afa0b6f18c.mp3?alt=media&token=a807563f-ca1e-42c2-966f-cdfa33c1eef1"
+          }
+        ]
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fc6594b9c21aaf0595786967d884bda7c35f53c20.mp3?alt=media&token=019615cc-cb4a-4bbc-9857-59797abf88e8",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fe2246ea7cab0b65ee3b535479cf90f0f92df90fe.mp3?alt=media&token=ea50eb4f-b012-49f1-94a3-2d626585c7c8",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 2,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F8a318ab3ce98e2a71b458d184a5535b1a2280794.mp3?alt=media&token=ab7ff343-f007-4b10-a3d8-3440aec6de11",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Faad1dfe48e7bbe0a1bc1f71c8e08d5ab65cd53b0.mp3?alt=media&token=429a5230-6c14-4ccb-9d1b-61ebdded2602"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F8ab7e5cf9aa35deb1368189e69565f858a7aad9e.mp3?alt=media&token=631c7293-21d2-478f-88b0-553154a828d3",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Ffb1ec68e97a5b0efd8c03d6bad2bbd6e92da2bee.mp3?alt=media&token=34919f0e-a676-4a5e-b828-bcb0e797edad"
+          }
+        ]
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F23d211bfdbb4815121e04e842577d6020ffbee92.mp3?alt=media&token=05aff0cf-c1cf-435a-97f9-b260ef91fd1b",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F48a478d671c41e5243650b709b03ce5c6553d04b.mp3?alt=media&token=c592eada-514d-403d-9c85-6ac6090f51f0",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 2,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fdd09744285c9d98c92c0786f7f7b06acf991fe05.mp3?alt=media&token=76fa2546-fe45-4747-92d2-68bb02686280",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fb8ab161e45df1c7db35f491d9e103664a24871d4.mp3?alt=media&token=ec3ff8d7-5c12-402e-a8c4-174fc4c7b6aa"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fc04e82bb214918bb4d4b57fd0286728ad0b5dcf0.mp3?alt=media&token=73f13296-d7af-4aea-bfb4-d1dd2c878bcb",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F706d92b19f742b086e771f3cdd2e950327b55d3c.mp3?alt=media&token=0c63fd71-7cb6-4cb8-95eb-8700faa21591"
+          }
+        ]
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F94b4000ea1d508cb992a8a9a732985a9d489b6cd.mp3?alt=media&token=25462608-03e6-4abb-81bb-523e728ac8f5",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F363b6c89cb9d69f703cbc75aedba725ee8e333a0.mp3?alt=media&token=768f50f2-b810-48c0-becb-949bc6a6b6b9",
+        "phrases": [
+          {
+            "start": 0,
+            "end": 2,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fd4111f067b2d70640573a4f35eb4b149d4a6074e.mp3?alt=media&token=f0ec8448-e619-4713-a30a-033c1b8729ad",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2Fdca49253036b78300b072b71f9cc7662b5eead9c.mp3?alt=media&token=200419ce-98d8-444e-a0fd-3dee92b47450"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F534b841dcfbf143a4cf641f2d753153c95ea8357.mp3?alt=media&token=a4957091-7332-427c-a022-419fd1d599ff",
+            "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2FKantate_Nr_147_Wohl_mir_dass_ich_Jesum_habe_e1c82aa6%2F90b7ccf24289ac489aecbc2aebcca12d33760234.mp3?alt=media&token=fcea33a1-fe2d-4ce5-8439-fc861e90d6fc"
+          }
+        ]
+      }
+    ]
+  }
 }

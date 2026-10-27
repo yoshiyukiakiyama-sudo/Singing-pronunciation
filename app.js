@@ -158,6 +158,7 @@ async function showSong(id) {
             event.stopPropagation();
             stop();
             const aline = d.audio?.lines?.[i];
+            if (useFile(d) && d.audio?.phrases === false) return;
             if (aline?.phrases) {
               const p = aline.phrases.find(p => index >= p.start && index <= p.end);
               if (p) {
@@ -202,7 +203,7 @@ async function showSong(id) {
   const updateControls = () => {
     const file = useFile(d);
     document.getElementById("rateWrap").hidden = file;
-    document.getElementById("fileSpeedWrap").hidden = !file;
+    document.getElementById("fileSpeedWrap").hidden = !file || singleSpeed(d);
   };
   if (modeSel) {
     modeSel.value = playMode;
@@ -223,11 +224,22 @@ function useFile(d) {
   return !!d.audio && playMode === "file";
 }
 
+// 速度が1種類だけの曲は切替を出さず、その速度で再生する
+function singleSpeed(d) {
+  const speeds = d.audio?.speeds;
+  return Array.isArray(speeds) && speeds.length === 1 ? speeds[0] : null;
+}
+
 const player = new Audio();
 player.preload = "auto";
 
+function clipUrl(clip) {
+  const first = fileSlow ? "s" : "n";
+  return clip[first] || clip[fileSlow ? "n" : "s"];
+}
+
 function playClip(clip, onend) {
-  const url = clip[fileSlow ? "s" : "n"];
+  const url = clipUrl(clip);
   player.onended = onend || null;
   player.onerror = () => {
     playing = false;
@@ -243,7 +255,7 @@ function playClip(clip, onend) {
 
 function prefetch(d, i) {
   const clip = useFile(d) && d.audio.lines[i];
-  if (clip) fetch(clip[fileSlow ? "s" : "n"], { mode: "no-cors" }).catch(() => {});
+  if (clip) fetch(clipUrl(clip), { mode: "no-cors" }).catch(() => {});
 }
 
 function speak(d, i, onend) {
