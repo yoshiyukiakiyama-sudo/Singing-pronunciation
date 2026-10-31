@@ -1,0 +1,49 @@
+{
+  "title": "Kantate Nr.147  6.Choral (AI音声・北ドイツ語) ",
+  "artist": "J.S.BACH",
+  "language": "ドイツ語",
+  "lang_code": "de-DE",
+  "generation_model": "gemini-3.8-flash",
+  "lines": [
+    {
+      "original": "Wohl mir, daß ich Jesum habe,",
+      "translation": "私にはイエスがおられる、なんと幸いなことか、",
+      "pronunciation": "ヴォール ミール ダス イッヒ イェーズム ハーベ"
+    },
+    {
+      "original": "O wie feste halt ich ihn,",
+      "translation": "おお、私はなんと固く主を抱きしめていることか、",
+      "pronunciation": "オー ヴィー フェステ ハルト イッヒ イーン"
+    },
+    {
+      "original": "Daß er mir mein Herze labe,",
+      "translation": "主が私の心を潤し力づけてくださるように、",
+      "pronunciation": "ダス エーア ミール マイン ヘルツェ ラーベ"
+    },
+    {
+      "original": "Wenn ich krank und traurig bin.",
+      "translation": "私が病み、悲しみに沈んでいるときにも。",
+      "pronunciation": "ヴェン イッヒ クランク ウント トラオリヒ ビン"
+    },
+    {
+      "original": "Jesum hab ich, der mich liebet",
+      "translation": "私にはイエスがおられる、私を愛し、",
+      "pronunciation": "イェーズム ハプ イッヒ デーア ミッヒ リーベト"
+    },
+    {
+      "original": "Und sich mir zu eigen gibet;",
+      "translation": "御自身を私に捧げ与えてくださる主が。",
+      "pronunciation": "ウント ジッヒ ミール ツー アイゲン ギーベト"
+    },
+    {
+      "original": "Ach drum laß ich Jesum nicht,",
+      "translation": "ああ、それゆえに私はイエスを決して離さない、",
+      "pronunciation": "アッハ ドルム ラス イッヒ イェーズム ニヒト"
+    },
+    {
+      "original": "Wenn mir gleich mein Herze bricht.",
+      "translation": "たとえ私の心が打ち砕かれようとも。",
+      "pronunciation": "ヴェン ミール グライヒ マイン ヘルツェ ブリヒト"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "title": "カンタータ 第147番　Jesus bleibet meine Freude",
+  "artist": "J.S.BACH",
+  "language": "ドイツ語",
+  "lang_code": "de-DE",
+  "generation_model": "gemini-3.8-flash",
+  "lines": [
+    {
+      "original": "Jesus bleibet meine Freude,",
+      "translation": "イエスは私の変わらぬ喜び、",
+      "pronunciation": "イェーズス ブライベト マイネ フロイデ"
+    },
+    {
+      "original": "Meines Herzens Trost und Saft,",
+      "translation": "私の心の慰め、命の力。",
+      "pronunciation": "マイネス ヘルツェンス トロースト ウント ザフト"
+    },
+    {
+      "original": "Jesus wehret allem Leide,",
+      "translation": "イエスはすべての苦難を防ぎ、",
+      "pronunciation": "イェーズス ヴェーレト アレム ライデ"
+    },
+    {
+      "original": "Er ist meines Lebens Kraft,",
+      "translation": "主は私の命の力。",
+      "pronunciation": "エーア イスト マイネス レーベンス クラフト"
+    },
+    {
+      "original": "Meiner Augen Lust und Sonne,",
+      "translation": "私の目の喜び、そして太陽、",
+      "pronunciation": "マイナー アウゲン ルスト ウント ゾンネ"
+    },
+    {
+      "original": "Meiner Seele Schatz und Wonne;",
+      "translation": "私の魂の宝、そして歓喜。",
+      "pronunciation": "マイナー ゼーレ シャッツ ウント ヴォンネ"
+    },
+    {
+      "original": "Darum lass ich Jesum nicht",
+      "translation": "だから私はイエスを手放さない、",
+      "pronunciation": "ダールム ラス イッヒ イェーズム ニヒト"
+    },
+    {
+      "original": "Aus dem Herzen und Gesicht.",
+      "translation": "心からも、その御姿からも。",
+      "pronunciation": "アウス デム ヘルツェン ウント ゲズィヒト"
+    }
+  ],
+  "audio": {
+    "provider": "cloud",
+    "model": "Google Cloud Text-to-Speech",
+    "voice": "de-DE-Neural2-B",
+    "speeds": [
+      "n",
+      "s"
+    ],
+    "phrases": true,
+    "lines": [
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2Fedbe6c77fcccb41081ed4a4523a80909f7cf77d2.mp3?alt=media&token=6139e239-408e-412c-9d61-32f1c961ac1f",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2Fdf060f8003879f9f4b147d4648afb0dff1338d94.mp3?alt=media&token=d5c722e3-b31c-4799-bd12-71979484818b"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F699f1b67241481a913c058a7cb604c96e840fb9e.mp3?alt=media&token=4734be3b-afda-4bbd-806a-208841f56293",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F2c3f757ca1801bd331df2d892dd7ed701376dc3c.mp3?alt=media&token=7b2634e4-9fba-4b21-8d06-4079a36b7755"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F7ada433f301905953f300da868c39ba9e89c4e9d.mp3?alt=media&token=10937fed-4e33-4350-a622-2cefacc1f96a",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F97b124f7d5e11710e24eae2639a4ea60eb1f7f0e.mp3?alt=media&token=f69f0227-ae99-4d55-8085-2845c69af2e1"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F5740eb6f6b62950a5d858322b5fdda5f8bfc0219.mp3?alt=media&token=9babf8d0-7d04-4c4d-a156-50372d6c2b4c",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2Fe7d0c903e476b03d130a5f7bd04f2778d511c03d.mp3?alt=media&token=a9a991f0-363c-4bd7-b00b-21010f972fc5"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F2fc6e8175a833bb1c2d72763080f19ed42dc5d22.mp3?alt=media&token=568b2930-56f6-4571-8885-d6be436d3a40",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F2753dcf54a5c2ff9e912378b5539181cbf620584.mp3?alt=media&token=3e2c5fe4-7bde-46df-a486-6871f614af6b"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F4953e9ea32a1140c18061116564fa36bb49ca232.mp3?alt=media&token=51ba3f72-1ddb-4499-9180-7361eaae00ba",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F21e70261ad9a7631e1868d44b2482f7f442a5476.mp3?alt=media&token=4c90535b-321c-4a8d-b544-1a3ea2ebe35c"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2Fc2b8cc60e2acce9a0e9a6a758da598d98c45c44d.mp3?alt=media&token=69b4fe44-0fcd-4e8b-a8b6-1ca410de9637",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F86fcad2c3a9dcb2268a21beba7e0bb37402a5929.mp3?alt=media&token=152b2cb2-15bc-4320-8714-975d239cfc67"
+      },
+      {
+        "n": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F6bf4c3d8badd179729b8f9ef5b55a4cbe39f66e9.mp3?alt=media&token=4fc0139c-86d0-4af5-be0e-adb096cbe8e5",
+        "s": "https://firebasestorage.googleapis.com/v0/b/my-web-app-63960.firebasestorage.app/o/singing-pronunciation-lab%2Faudio%2F147_Jesus_bleibet_meine_Freude_f0e5224d%2F7cbcb811ca5e9f02371f1f3ca33706b8bae8898b.mp3?alt=media&token=64573cdd-44aa-403c-885d-836a0d01bc07"
+      }
+    ]
+  }
+}

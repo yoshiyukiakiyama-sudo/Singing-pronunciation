@@ -4,6 +4,11 @@ const ADMIN = SCRIPT.dataset.mode === "admin";
 const app = document.getElementById("app");
 let timer = null, playing = false, rate = 0.6, fileSlow = true;
 let playMode = localStorage.getItem("playMode") === "device" ? "device" : "file";
+const GERMAN_PRONUNCIATIONS = {
+  standard: "標準ドイツ語",
+  northern: "北部ドイツ語",
+  southern: "南部ドイツ語",
+};
 
 function errorHtml(text, detail) {
   return `<div class="error">${esc(text)}${detail ? `<small>（詳細: ${esc(detail)}）</small>` : ""}</div>`;
@@ -19,6 +24,12 @@ function showSpeechMessage(text) {
   let box = document.getElementById("speechMsg");
   if (!box) return;
   box.innerHTML = text ? errorHtml(text) : "";
+}
+
+function pronunciationLabel(audio) {
+  const condition = audio?.pronunciation;
+  return condition && GERMAN_PRONUNCIATIONS[condition]
+    ? GERMAN_PRONUNCIATIONS[condition] : "";
 }
 
 let adminFilter = "";
@@ -132,6 +143,7 @@ async function showSong(id) {
     <aside class="notice">
       <p><strong>翻訳モデル：</strong>${esc(d.generation_model || "記録なし")}</p>
       <p><strong>音声合成モデル：</strong>${esc(d.audio?.model || "記録なし")}</p>
+      ${pronunciationLabel(d.audio) ? `<p><strong>ドイツ語発音条件：</strong>${esc(pronunciationLabel(d.audio))}</p>` : ""}
       <p>翻訳はAIによる簡易訳です。文脈や詩的表現などを十分に反映できず、意味が不正確な場合があります。</p>
       <p>カタカナ表記は発音の目安です。カタカナでは原語の音やアクセントなどを正確に表現できず、実際の発音とは異なります。</p>
     </aside>

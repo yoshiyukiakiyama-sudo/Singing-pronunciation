@@ -1,5 +1,12 @@
 [
   {
+    "id": "147_Jesus_bleibet_meine_Freude_f0e5224d",
+    "title": "カンタータ 第147番　Jesus bleibet meine Freude",
+    "artist": "J.S.BACH",
+    "language": "ドイツ語",
+    "lang_code": "de-DE"
+  },
+  {
     "id": "Ave_Maria_b30a944c",
     "title": "Ave Maria",
     "artist": "",
@@ -7,8 +14,22 @@
     "lang_code": "la"
   },
   {
+    "id": "CHOR_DER_JAGER_AI_24a49fee",
+    "title": "CHOR DER JÄGER (AI音声・南ドイツ語) ",
+    "artist": "von Weber / Kin",
+    "language": "ドイツ語",
+    "lang_code": "de-DE"
+  },
+  {
     "id": "CHOR_DER_JAGER_AI_333d17fe",
     "title": "CHOR DER JÄGER (AI音声)",
+    "artist": "von Weber / Kin",
+    "language": "ドイツ語",
+    "lang_code": "de-DE"
+  },
+  {
+    "id": "CHOR_DER_JAGER_AI_7aeea081",
+    "title": "CHOR DER JÄGER (AI音声・北ドイツ語) ",
     "artist": "von Weber / Kin",
     "language": "ドイツ語",
     "lang_code": "de-DE"
@@ -31,6 +52,20 @@
     "id": "CHOR_DER_JAGER_Cloud_TTS_d7d7f44e",
     "title": "CHOR DER JÄGER ( Cloud-TTS )",
     "artist": "von Weber / Kind",
+    "language": "ドイツ語",
+    "lang_code": "de-DE"
+  },
+  {
+    "id": "Kantate_Nr_147_6_Choral_AI_764826aa",
+    "title": "Kantate Nr.147  6.Choral (AI音声・北ドイツ語) ",
+    "artist": "J.S.BACH",
+    "language": "ドイツ語",
+    "lang_code": "de-DE"
+  },
+  {
+    "id": "Kantate_Nr_147_6_Choral_AI_936defa7",
+    "title": "Kantate Nr.147  6.Choral (AI音声・南ドイツ語) ",
+    "artist": "J.S.BACH",
     "language": "ドイツ語",
     "lang_code": "de-DE"
   },
