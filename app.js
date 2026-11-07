@@ -405,16 +405,19 @@ function speak(d, i, onend) {
 }
 
 function speakText(d, i, text, onend, clip) {
+  const grammarMode = document.getElementById("grammarMode");
+  const isGrammarVisible = grammarMode && !grammarMode.hidden;
   const els = document.querySelectorAll(".line");
   els.forEach(e => e.classList.remove("active"));
   if (els[i]) {
     els[i].classList.add("active");
-    els[i].scrollIntoView({ block: "center", behavior: "smooth" });
+    if (!isGrammarVisible) {
+      els[i].scrollIntoView({ block: "center", behavior: "smooth" });
+    }
   }
   const grammarCard = document.querySelector(".grammar-card");
   if (grammarCard) {
     grammarCard.classList.add("active");
-    grammarCard.scrollIntoView({ block: "start", behavior: "smooth" });
   }
   
   const resetGrammarCardBg = () => {
