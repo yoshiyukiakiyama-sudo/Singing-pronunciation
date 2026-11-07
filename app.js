@@ -414,7 +414,7 @@ function speakText(d, i, text, onend, clip) {
   const grammarCard = document.querySelector(".grammar-card");
   if (grammarCard) {
     grammarCard.classList.add("active");
-    grammarCard.scrollIntoView({ block: "center", behavior: "smooth" });
+    grammarCard.scrollIntoView({ block: "start", behavior: "smooth" });
   }
   
   const resetGrammarCardBg = () => {
