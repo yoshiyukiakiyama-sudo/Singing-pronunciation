@@ -1,0 +1,320 @@
+{
+  "lang_code": "de-DE",
+  "generation_model": "gemini-3.8-flash",
+  "lines": [
+    {
+      "original": "Jesus bleibet meine Freude,",
+      "translation": "イエスは私の変わらぬ喜び、",
+      "tokens": [
+        {
+          "word": "Jesus",
+          "lemma": "Jesus",
+          "part_of_speech": "固有名詞",
+          "grammar": "男性単数1格（主格）",
+          "meaning": "イエス"
+        },
+        {
+          "word": "bleibet",
+          "lemma": "bleiben",
+          "part_of_speech": "動詞",
+          "grammar": "直説法現在3人称単数（古形・詩形）",
+          "meaning": "とどまる、～のままである"
+        },
+        {
+          "word": "meine",
+          "lemma": "mein",
+          "part_of_speech": "所有代名詞（限定詞）",
+          "grammar": "女性単数1格（主格）",
+          "meaning": "私の"
+        },
+        {
+          "word": "Freude,",
+          "lemma": "Freude",
+          "part_of_speech": "名詞",
+          "grammar": "女性単数1格（主格）",
+          "meaning": "喜び"
+        }
+      ]
+    },
+    {
+      "original": "Meines Herzens Trost und Saft,",
+      "translation": "私の心の慰め、命の力。",
+      "tokens": [
+        {
+          "word": "Meines",
+          "lemma": "mein",
+          "part_of_speech": "所有代名詞（限定詞）",
+          "grammar": "中性単数2格（属格）",
+          "meaning": "私の"
+        },
+        {
+          "word": "Herzens",
+          "lemma": "Herz",
+          "part_of_speech": "名詞",
+          "grammar": "中性単数2格（属格）",
+          "meaning": "心の"
+        },
+        {
+          "word": "Trost",
+          "lemma": "Trost",
+          "part_of_speech": "名詞",
+          "grammar": "男性単数1格（主格）",
+          "meaning": "慰め"
+        },
+        {
+          "word": "und",
+          "lemma": "und",
+          "part_of_speech": "接続詞",
+          "grammar": "並列接続詞",
+          "meaning": "そして"
+        },
+        {
+          "word": "Saft,",
+          "lemma": "Saft",
+          "part_of_speech": "名詞",
+          "grammar": "男性単数1格（主格）",
+          "meaning": "力、活力、生気"
+        }
+      ]
+    },
+    {
+      "original": "Jesus wehret allem Leide,",
+      "translation": "イエスはすべての苦難を防ぎ、",
+      "tokens": [
+        {
+          "word": "Jesus",
+          "lemma": "Jesus",
+          "part_of_speech": "固有名詞",
+          "grammar": "男性単数1格（主格）",
+          "meaning": "イエス"
+        },
+        {
+          "word": "wehret",
+          "lemma": "wehren",
+          "part_of_speech": "動詞",
+          "grammar": "直説法現在3人称単数（古形・詩形）",
+          "meaning": "防ぐ、退ける"
+        },
+        {
+          "word": "allem",
+          "lemma": "all",
+          "part_of_speech": "代名詞（限定詞）",
+          "grammar": "中性単数3格（与格）",
+          "meaning": "すべての"
+        },
+        {
+          "word": "Leide,",
+          "lemma": "Leid",
+          "part_of_speech": "名詞",
+          "grammar": "中性単数3格（与格、古形語尾-e）",
+          "meaning": "苦難、苦痛"
+        }
+      ]
+    },
+    {
+      "original": "Er ist meines Lebens Kraft,",
+      "translation": "主は私の命の力。",
+      "tokens": [
+        {
+          "word": "Er",
+          "lemma": "er",
+          "part_of_speech": "人称代名詞",
+          "grammar": "3人称男性単数1格（主格）",
+          "meaning": "主は、彼は"
+        },
+        {
+          "word": "ist",
+          "lemma": "sein",
+          "part_of_speech": "動詞",
+          "grammar": "直説法現在3人称単数",
+          "meaning": "～である"
+        },
+        {
+          "word": "meines",
+          "lemma": "mein",
+          "part_of_speech": "所有代名詞（限定詞）",
+          "grammar": "中性単数2格（属格）",
+          "meaning": "私の"
+        },
+        {
+          "word": "Lebens",
+          "lemma": "Leben",
+          "part_of_speech": "名詞",
+          "grammar": "中性単数2格（属格）",
+          "meaning": "命の、人生の"
+        },
+        {
+          "word": "Kraft,",
+          "lemma": "Kraft",
+          "part_of_speech": "名詞",
+          "grammar": "女性単数1格（主格）",
+          "meaning": "力"
+        }
+      ]
+    },
+    {
+      "original": "Meiner Augen Lust und Sonne,",
+      "translation": "私の目の喜び、そして太陽、",
+      "tokens": [
+        {
+          "word": "Meiner",
+          "lemma": "mein",
+          "part_of_speech": "所有代名詞（限定詞）",
+          "grammar": "複数2格（属格）",
+          "meaning": "私の"
+        },
+        {
+          "word": "Augen",
+          "lemma": "Auge",
+          "part_of_speech": "名詞",
+          "grammar": "中性複数2格（属格）",
+          "meaning": "目の"
+        },
+        {
+          "word": "Lust",
+          "lemma": "Lust",
+          "part_of_speech": "名詞",
+          "grammar": "女性単数1格（主格）",
+          "meaning": "喜び、楽し美"
+        },
+        {
+          "word": "und",
+          "lemma": "und",
+          "part_of_speech": "接続詞",
+          "grammar": "並列接続詞",
+          "meaning": "そして"
+        },
+        {
+          "word": "Sonne,",
+          "lemma": "Sonne",
+          "part_of_speech": "名詞",
+          "grammar": "女性単数1格（主格）",
+          "meaning": "太陽"
+        }
+      ]
+    },
+    {
+      "original": "Meiner Seele Schatz und Wonne;",
+      "translation": "私の魂の宝、そして歓喜。",
+      "tokens": [
+        {
+          "word": "Meiner",
+          "lemma": "mein",
+          "part_of_speech": "所有代名詞（限定詞）",
+          "grammar": "女性単数2格（属格）",
+          "meaning": "私の"
+        },
+        {
+          "word": "Seele",
+          "lemma": "Seele",
+          "part_of_speech": "名詞",
+          "grammar": "女性単数2格（属格）",
+          "meaning": "魂の"
+        },
+        {
+          "word": "Schatz",
+          "lemma": "Schatz",
+          "part_of_speech": "名詞",
+          "grammar": "男性単数1格（主格）",
+          "meaning": "宝"
+        },
+        {
+          "word": "und",
+          "lemma": "und",
+          "part_of_speech": "接続詞",
+          "grammar": "並列接続詞",
+          "meaning": "そして"
+        },
+        {
+          "word": "Wonne;",
+          "lemma": "Wonne",
+          "part_of_speech": "名詞",
+          "grammar": "女性単数1格（主格）",
+          "meaning": "歓喜、至福"
+        }
+      ]
+    },
+    {
+      "original": "Darum lass ich Jesum nicht",
+      "translation": "だから私はイエスを手放さない、",
+      "tokens": [
+        {
+          "word": "Darum",
+          "lemma": "darum",
+          "part_of_speech": "副詞",
+          "grammar": "指示副詞",
+          "meaning": "だから、それゆえ"
+        },
+        {
+          "word": "lass",
+          "lemma": "lassen",
+          "part_of_speech": "動詞",
+          "grammar": "直説法現在1人称単数（詩的短縮形）",
+          "meaning": "放す、去らせる"
+        },
+        {
+          "word": "ich",
+          "lemma": "ich",
+          "part_of_speech": "人称代名詞",
+          "grammar": "1人称単数1格（主格）",
+          "meaning": "私は"
+        },
+        {
+          "word": "Jesum",
+          "lemma": "Jesus",
+          "part_of_speech": "固有名詞",
+          "grammar": "男性単数4格（対格、ラテン語格変化形）",
+          "meaning": "イエスを"
+        },
+        {
+          "word": "nicht",
+          "lemma": "nicht",
+          "part_of_speech": "副詞",
+          "grammar": "否定副詞",
+          "meaning": "～ない"
+        }
+      ]
+    },
+    {
+      "original": "Aus dem Herzen und Gesicht.",
+      "translation": "心からも、その御姿からも。",
+      "tokens": [
+        {
+          "word": "Aus",
+          "lemma": "aus",
+          "part_of_speech": "前置詞",
+          "grammar": "3格（与格）支配",
+          "meaning": "～から、～の外へ"
+        },
+        {
+          "word": "dem",
+          "lemma": "der",
+          "part_of_speech": "定冠詞",
+          "grammar": "中性単数3格（与格）",
+          "meaning": "その"
+        },
+        {
+          "word": "Herzen",
+          "lemma": "Herz",
+          "part_of_speech": "名詞",
+          "grammar": "中性単数3格（与格、不規則変化）",
+          "meaning": "心"
+        },
+        {
+          "word": "und",
+          "lemma": "und",
+          "part_of_speech": "接続詞",
+          "grammar": "並列接続詞",
+          "meaning": "および、そして"
+        },
+        {
+          "word": "Gesicht.",
+          "lemma": "Gesicht",
+          "part_of_speech": "名詞",
+          "grammar": "中性単数3格（与格）",
+          "meaning": "視界、顔、面影"
+        }
+      ]
+    }
+  ]
+}
