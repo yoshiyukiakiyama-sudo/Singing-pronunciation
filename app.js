@@ -20,6 +20,13 @@ async function fetchJson(url) {
   return res.json();
 }
 
+async function fetchOptionalJson(url) {
+  const res = await fetch(url, { cache: "no-cache" });
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
 function showSpeechMessage(text) {
   let box = document.getElementById("speechMsg");
   if (!box) return;
@@ -131,14 +138,34 @@ async function showSong(id) {
       d.audio = await fetchJson(`/local/songs/${encodeURIComponent(id)}.audio.json`);
     } catch (e) { /* ローカル確認用の音声が無ければ従来どおり */ }
   }
+  let grammar = null, grammarError = "";
+  try {
+    grammar = await fetchOptionalJson(`${BASE}songs/${encodeURIComponent(id)}.grammar.json`);
+  } catch (e) {
+    grammarError = `文法説明を読み込めませんでした: ${e.message}`;
+  }
+  const grammarIsValid = grammar && Array.isArray(grammar.lines)
+    && grammar.lines.length === d.lines.length
+    && grammar.lines.every((line, i) => line
+      && line.original === d.lines[i].original
+      && line.translation === d.lines[i].translation
+      && Array.isArray(line.tokens) && line.tokens.length > 0
+      && line.tokens.every(token => token
+        && ["word", "lemma", "part_of_speech", "grammar", "meaning"]
+          .every(key => typeof token[key] === "string" && token[key].trim()))
+      && line.tokens.map(token => token.word).join("\u0000")
+        === line.original.trim().split(/\s+/).join("\u0000"));
+  if (grammar && !grammarIsValid) {
+    const missingLemma = Array.isArray(grammar.lines)
+      && grammar.lines.some(line => Array.isArray(line?.tokens)
+        && line.tokens.some(token => !token || typeof token.lemma !== "string" || !token.lemma.trim()));
+    grammar = null;
+    grammarError = missingLemma
+      ? "文法説明JSONに単語の原型（lemma）情報がありません。生成ツールを最新版で起動し直し、この曲の文法説明を再生成してください。"
+      : "文法説明データが曲の行構成と一致しません。生成ツールで再生成してください。";
+  }
   app.innerHTML = `
-    <div class="bar"><button class="sub" id="back">← 一覧</button>
-    <button id="playAll">▶ 発音再生</button>
-    <button class="sub" id="stop">■ 停止</button></div>
-    ${d.audio ? `<div class="bar"><label>再生方式 <select id="mode"><option value="file">音声ファイル</option><option value="device">端末の音声</option></select></label></div>` : ""}
-    <div class="bar"><label id="rateWrap">速度 <input type="range" id="rate" min="0.2" max="1" step="0.1" value="${rate}"></label>
-    <label id="fileSpeedWrap">速度 <select id="fileSpeed"><option value="n">標準</option><option value="s">ゆっくり</option></select></label></div>
-    <div id="speechMsg"></div>
+    <div class="bar"><button class="sub" id="back">← 一覧</button></div>
     <h2>${esc(d.title)} <small>${esc(d.artist || "")}</small></h2>
     <aside class="notice">
       <p><strong>翻訳モデル：</strong>${esc(d.generation_model || "記録なし")}</p>
@@ -147,7 +174,26 @@ async function showSong(id) {
       <p>翻訳はAIによる簡易訳です。文脈や詩的表現などを十分に反映できず、意味が不正確な場合があります。</p>
       <p>カタカナ表記は発音の目安です。カタカナでは原語の音やアクセントなどを正確に表現できず、実際の発音とは異なります。</p>
     </aside>
-    <p class="hint">カタカナ・訳語をタップ: 行を再生 / 原文の単語をタップ: その単語を含む文節を再生</p><div id="lines"></div>`;
+    ${grammarError ? errorHtml(grammarError) : ""}
+    ${grammar ? `<div class="bar view-mode-buttons" role="group" aria-label="表示モード">
+      <button id="normalModeButton" aria-pressed="true">通常</button>
+      <button id="grammarModeButton" aria-pressed="false">文法</button></div>` : ""}
+    <div id="normalMode">
+      <div class="bar"><button id="playAll">▶ 発音再生</button>
+      <button class="sub" id="stop">■ 停止</button></div>
+      ${d.audio ? `<div class="bar"><label>再生方式 <select id="mode"><option value="file">音声ファイル</option><option value="device">端末の音声</option></select></label></div>` : ""}
+      <div class="bar"><label id="rateWrap">速度 <input type="range" id="rate" min="0.2" max="1" step="0.1" value="${rate}"></label>
+      <label id="fileSpeedWrap">速度 <select id="fileSpeed"><option value="n">標準</option><option value="s">ゆっくり</option></select></label></div>
+      <div id="speechMsg"></div>
+      <p class="hint">カタカナ・訳語をタップ: 行を再生 / 原文の単語をタップ: その単語を含む文節を再生</p><div id="lines"></div>
+    </div>
+    ${grammar ? `<section id="grammarMode" class="grammar-mode" hidden>
+      <div class="bar grammar-nav"><button class="sub" id="firstSentence">|← 先頭文</button>
+      <button class="sub" id="previousSentence">← 前の文</button>
+      <span id="sentencePosition"></span><button id="nextSentence">次の文 →</button></div>
+      <div id="grammarContent"></div>
+    </section>` : ""}`;
+  document.getElementById("back").onclick = showList;
   const box = document.getElementById("lines");
   d.lines.forEach((l, i) => {
     const el = document.createElement("div");
@@ -207,7 +253,6 @@ async function showSong(id) {
     });
     box.appendChild(el);
   });
-  document.getElementById("back").onclick = showList;
   document.getElementById("stop").onclick = stop;
   document.getElementById("rate").oninput = e => rate = +e.target.value;
   document.getElementById("playAll").onclick = () => { stop(); playing = true; playFrom(d, 0); };
@@ -230,6 +275,91 @@ async function showSong(id) {
   document.getElementById("fileSpeed").value = fileSlow ? "s" : "n";
   document.getElementById("fileSpeed").onchange = e => fileSlow = e.target.value === "s";
   updateControls();
+  if (grammar) {
+    let sentenceIndex = 0;
+    const grammarContent = document.getElementById("grammarContent");
+    const renderGrammarLine = () => {
+      const line = grammar.lines[sentenceIndex];
+      const card = document.createElement("article");
+      card.className = "grammar-card";
+      const original = document.createElement("div");
+      original.className = "orig";
+      original.textContent = line.original;
+      const translation = document.createElement("div");
+      translation.className = "tran grammar-translation";
+      translation.textContent = d.lines[sentenceIndex].translation;
+      const heading = document.createElement("h3");
+      heading.textContent = "単語の分解";
+      const tableWrap = document.createElement("div");
+      tableWrap.className = "grammar-table-wrap";
+      const table = document.createElement("table");
+      table.className = "grammar-table";
+      const header = document.createElement("tr");
+      for (const label of ["単語（原型）", "品詞", "文法・格", "意味"]) {
+        const cell = document.createElement("th");
+        cell.textContent = label;
+        header.appendChild(cell);
+      }
+      const thead = document.createElement("thead");
+      thead.appendChild(header);
+      const tbody = document.createElement("tbody");
+      for (const token of line.tokens) {
+        const row = document.createElement("tr");
+        const displayedWord = token.word === token.lemma
+          ? token.word : `${token.word}（${token.lemma}）`;
+        for (const value of [displayedWord, token.part_of_speech, token.grammar, token.meaning]) {
+          const cell = document.createElement("td");
+          cell.textContent = value;
+          row.appendChild(cell);
+        }
+        tbody.appendChild(row);
+      }
+      table.append(thead, tbody);
+      tableWrap.appendChild(table);
+      card.append(original, translation, heading, tableWrap);
+      
+      // クリックハンドラを追加（原語・翻訳をクリックで音声再生）
+      original.addEventListener("click", (event) => {
+        event.stopPropagation();
+        stop();
+        speak(d, sentenceIndex);
+      });
+      translation.addEventListener("click", (event) => {
+        event.stopPropagation();
+        stop();
+        speak(d, sentenceIndex);
+      });
+      
+      grammarContent.replaceChildren(card);
+      document.getElementById("sentencePosition").textContent =
+        `${sentenceIndex + 1} / ${grammar.lines.length}`;
+      document.getElementById("firstSentence").disabled = sentenceIndex === 0;
+      document.getElementById("previousSentence").disabled = sentenceIndex === 0;
+      document.getElementById("nextSentence").disabled = sentenceIndex === grammar.lines.length - 1;
+    };
+    document.getElementById("firstSentence").onclick = () => {
+      sentenceIndex = 0;
+      renderGrammarLine();
+    };
+    document.getElementById("previousSentence").onclick = () => {
+      if (sentenceIndex > 0) sentenceIndex--;
+      renderGrammarLine();
+    };
+    document.getElementById("nextSentence").onclick = () => {
+      if (sentenceIndex < grammar.lines.length - 1) sentenceIndex++;
+      renderGrammarLine();
+    };
+    const setViewMode = isGrammar => {
+      if (isGrammar) stop();
+      document.getElementById("normalMode").hidden = isGrammar;
+      document.getElementById("grammarMode").hidden = !isGrammar;
+      document.getElementById("normalModeButton").setAttribute("aria-pressed", String(!isGrammar));
+      document.getElementById("grammarModeButton").setAttribute("aria-pressed", String(isGrammar));
+      if (isGrammar) renderGrammarLine();
+    };
+    document.getElementById("normalModeButton").onclick = () => setViewMode(false);
+    document.getElementById("grammarModeButton").onclick = () => setViewMode(true);
+  }
 }
 
 function useFile(d) {
@@ -277,10 +407,26 @@ function speak(d, i, onend) {
 function speakText(d, i, text, onend, clip) {
   const els = document.querySelectorAll(".line");
   els.forEach(e => e.classList.remove("active"));
-  els[i].classList.add("active");
-  els[i].scrollIntoView({ block: "center", behavior: "smooth" });
+  if (els[i]) {
+    els[i].classList.add("active");
+    els[i].scrollIntoView({ block: "center", behavior: "smooth" });
+  }
+  const grammarCard = document.querySelector(".grammar-card");
+  if (grammarCard) {
+    grammarCard.classList.add("active");
+    grammarCard.scrollIntoView({ block: "center", behavior: "smooth" });
+  }
+  
+  const resetGrammarCardBg = () => {
+    if (grammarCard) grammarCard.classList.remove("active");
+  };
+  const wrappedOnend = () => {
+    resetGrammarCardBg();
+    if (onend) onend();
+  };
+  
   if (useFile(d) && clip) {
-    playClip(clip, onend);
+    playClip(clip, wrappedOnend);
     return;
   }
   if (!("speechSynthesis" in window)) {
@@ -308,11 +454,12 @@ function speakText(d, i, text, onend, clip) {
     showSpeechMessage("教会ラテン語に近い発音を目指し、端末のイタリア語音声で再生します。イタリア語音声がない場合は発音が異なることがあります。");
   }
   u.rate = rate;
-  u.onend = onend || null;
+  u.onend = wrappedOnend;
   u.onerror = e => {
     if (e.error === "canceled" || e.error === "interrupted") return;
     playing = false;
     showSpeechMessage("音声を再生できませんでした。端末の音量や、音声データの追加をご確認ください。");
+    resetGrammarCardBg();
   };
   speechSynthesis.speak(u);
 }
