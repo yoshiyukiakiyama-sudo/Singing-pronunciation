@@ -20,7 +20,13 @@ button.sub { background: #888; }
 .notice { background: #fff8e1; border-left: 4px solid #e0a800; padding: 10px 12px; margin: 12px 0; font-size: .9rem; }
 .notice p { margin: 4px 0; }
 .grammar-mode { margin-top: 12px; }
-.grammar-nav { justify-content: space-between; }
+.grammar-nav { display: grid; grid-template-columns: auto auto 1fr auto; gap: 4px; }
+.grammar-nav button { padding: 10px 8px; font-size: .9rem; white-space: nowrap; min-width: 0; }
+#sentencePosition { text-align: center; white-space: nowrap; font-variant-numeric: tabular-nums; font-size: .9rem; }
+@media (max-width: 360px) {
+  .grammar-nav button { padding: 10px 6px; font-size: .8rem; }
+  #sentencePosition { font-size: .8rem; }
+}
 .grammar-nav button:disabled { opacity: .45; cursor: default; }
 .grammar-card { background: #fff; padding: 14px; border-radius: 8px; box-shadow: 0 1px 3px #0002; cursor: pointer; }
 .grammar-card.active { background: #fff3c4; }
